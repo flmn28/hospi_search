@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822151447) do
+ActiveRecord::Schema.define(version: 20170822152636) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20170822151447) do
     t.index ["reset_password_token"], name: "index_hospitals_on_reset_password_token", unique: true
   end
 
+  create_table "hospitals_departments", force: :cascade do |t|
+    t.integer  "hospital_id"
+    t.integer  "department_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string   "prefecture"
     t.string   "city"
@@ -46,6 +53,13 @@ ActiveRecord::Schema.define(version: 20170822151447) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "family_name_kanji"
+    t.string   "first_name_kanji"
+    t.string   "family_name_kana"
+    t.string   "first_name_kana"
+    t.boolean  "gender"
+    t.date     "birthday"
+    t.integer  "location_id"
     t.index ["email"], name: "index_patients_on_email", unique: true
     t.index ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true
   end
