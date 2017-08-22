@@ -1,0 +1,2 @@
+class HospitalsDepartment < ApplicationRecord
+end
