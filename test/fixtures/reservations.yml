@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 1
+  hospital_id: 1
+  department_id: 1
+  reserved_time: 2017-08-23 14:05:03
+
+two:
+  patient_id: 1
+  hospital_id: 1
+  department_id: 1
+  reserved_time: 2017-08-23 14:05:03

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822153811) do
+ActiveRecord::Schema.define(version: 20170823050503) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(version: 20170822153811) do
     t.integer  "location_id"
     t.index ["email"], name: "index_patients_on_email", unique: true
     t.index ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "patient_id"
+    t.integer  "hospital_id"
+    t.integer  "department_id"
+    t.datetime "reserved_time"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
