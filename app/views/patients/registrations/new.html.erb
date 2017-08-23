@@ -4,8 +4,39 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :family_name_kanji %><br />
+    <%= f.text_field :family_name_kanji %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name_kanji %><br />
+    <%= f.text_field :first_name_kanji %>
+  </div>
+
+  <div class="field">
+    <%= f.label :family_name_kana %><br />
+    <%= f.text_field :family_name_kana %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name_kana %><br />
+    <%= f.text_field :first_name_kana %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <label><%= f.radio_button :gender, true %>男</label>
+    <label><%= f.radio_button :gender, false %>女</label>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_field :birthday %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
@@ -20,6 +51,8 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+  <%=  %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
