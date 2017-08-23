@@ -4,6 +4,6 @@ class Patient < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :location
+  # belongs_to :location
   has_many :reservations
 end
