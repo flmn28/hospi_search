@@ -1,5 +1,38 @@
 
+@font-face {
+	font-family: 'MyFont';
+	src: url(../fonts/QuickSand/Quicksand-Bold.otf);
+}
+
+html {
+	height: 100%;	
+}
 body {
+	height: 100%;
+	margin: 10px;
 	text-align: center;
 }
 
+.h1 {
+	font-family: MyFont;
+}
+
+.main {
+	background-color: #93B8CA;
+	height: 100%;
+}
+
+.title {
+	color: #FFF;
+	font-family: MyFont;
+	float:left;
+}
+
+.title img {
+
+}
+
+.row {
+	border: solid #333333;
+
+}
