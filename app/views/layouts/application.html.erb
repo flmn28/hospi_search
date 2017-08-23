@@ -9,6 +9,33 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to "Hospi Search", '', class: "navbar-brand" %>
+          </div>
+
+          <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav navbar-right">
+              <% if patient_signed_in? %>
+                <li><%= link_to "ログアウト", destroy_patient_session_path, method: :delete %></li>
+              <% elsif hospital_signed_in? %>
+                <li><%= link_to "ログアウト", destroy_hospital_session_path, method: :delete %></li>
+              <% elsif %>
+                <li><%= link_to "新規登録（一般）", new_patient_registration_path %></li>
+                <li><%= link_to "新規登録（医療機関）", new_hospital_registration_path %></li>
+                <li><%= link_to "ログイン（一般）", new_patient_session_path %></li>
+                <li><%= link_to "ログイン（医療機関）", new_hospital_session_path %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <%= yield %>
   </body>
 </html>
