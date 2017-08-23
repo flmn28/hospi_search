@@ -12,4 +12,7 @@ Rails.application.routes.draw do
     registrations: 'hospitals/registrations'
   }
 
+  get '/search_hospitals' => 'reservations#search_hospitals'
+  get '/reserve' => 'reservations#reserve'
+
 end
