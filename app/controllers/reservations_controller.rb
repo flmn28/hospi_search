@@ -28,4 +28,10 @@ class ReservationsController < ApplicationController
 
   end
 
+  def toukyouto
+  end
+
+  def saitamakenn
+  end
+
 end
