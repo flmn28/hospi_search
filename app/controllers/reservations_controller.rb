@@ -12,4 +12,7 @@ class ReservationsController < ApplicationController
   def saitamakenn
   end
 
+  def finish
+  end
+
 end
