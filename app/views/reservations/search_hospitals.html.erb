@@ -1,40 +1,14 @@
 <h1>病院を検索</h1><br>
-地域を選択してください<br>
-<div class="btn-group">
-  <button type="button" class="btn"><span id="visibleValue">都道府県を選択</span></button>
-  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" hiddenTag="#hiddenValue" visibleTag="#visibleValue">
-    <li><a href="javascript:void(0)">東京都</a></li>
-    <li><a href="javascript:void(0)">埼玉県</a></li>
-  </ul>
-  <input type="hidden" id="hiddenValue" value="">
-</div><br>
-診療科を選択してください<br>
-<div class="btn-group">
-  <button type="button" class="btn"><span id="visibleValue">診療科を選択</span></button>
-  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" hiddenTag="#hiddenValue" visibleTag="#visibleValue">
-    <li><a href="javascript:void(0)">外科</a></li>
-    <li><a href="javascript:void(0)">内科</a></li>
-  </ul>
-  <input type="hidden" id="hiddenValue" value="">
-</div><br>
-検索範囲を選択してください<br>
-<div class="btn-group">
-  <button type="button" class="btn"><span id="visibleValue">検索範囲を選択</span></button>
-  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" hiddenTag="#hiddenValue" visibleTag="#visibleValue">
-    <li><a href="javascript:void(0)">～1km</a></li>
-    <li><a href="javascript:void(0)">～5km</a></li>
-  </ul>
-  <input type="hidden" id="hiddenValue" value="">
-</div><br>
-<br>
-<%= button_to "病院を探す" %>
+地域を入力してください<br>
+都道府県
+<%= form_tag(open_list_path, method: :get) %>
+<div><%= text_field_tag :prefecture, "" %></div>
+市区町村
+<div><%= text_field_tag :city, "" %></div>
 
+
+診療科を選択してください<br>
+<%= select_tag :department, options_for_select([["内科","naika"],["外科","geka"]]) %>
+<br>
+
+<%= submit_tag "病院を探す" %>
