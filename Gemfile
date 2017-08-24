@@ -61,7 +61,3 @@ gem 'devise'
 gem 'pry-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt'
-
-platforms :mswin do 
-  gem "wdm", :group => [:development, :test]
-end
