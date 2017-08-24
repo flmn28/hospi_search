@@ -12,16 +12,16 @@
           <td>
             <table>
               <tr>
-                <td>病院名</td>
-                <td class="hospital_name">hospital_name</td>
+                <td>病院名：</td>
+                <td class="hospital_name"><%= @hospital.name %></td>
               </tr>
               <tr>
-                <td>住所</td>
-                <td class="hospital_address">hospital.location.prefecture都 hospital.location.city区</td>
+                <td>所在地：</td>
+                <td class="hospital_address"><%= @location.prefecture %><%= @location.city %></td>
               </tr>
               <tr>
-                <td>Eメールアドレス</td>
-                <td class="hospital_mail">hogehoge@outlook.com</td>
+                <td>メールアドレス：</td>
+                <td class="hospital_mail"><%= @hospital.email %></td>
               </tr>
             </table>
           </td>
@@ -34,7 +34,7 @@
     </table>
 
       <div class="content">
-        <h2>病院の情報</h2>
+        <h2>病院の評判</h2>
         <table class="table">
           <thead>
             <tr>
@@ -42,10 +42,12 @@
               <th>レビュー</th>
             </tr>
           </thead>
-          <tr>
-            <th class="reviewer">にーの</th>
-            <th>ヤブ医者！！！！！！！診察中にセクハラな発言をされた！！！！！！！もう二度と行きたくないです！！！！！！！</th>
-          </tr>
+          <% @reviews.each do |review| %>
+            <tr>
+              <th class="reviewer"><%= review.name %></th>
+              <th><%= review.comment %></th>
+            </tr>
+          <% end %>
         </table>
       </div>
   </div>

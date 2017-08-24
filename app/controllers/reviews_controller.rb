@@ -10,6 +10,9 @@ class ReviewsController < ApplicationController
   end
 
   def review_list
+    @hospital = Hospital.find_by(id: params[:hospital_id])
+    @location = @hospital.location
+    @reviews = @hospital.reviews
   end
 
 end
