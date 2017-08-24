@@ -48,4 +48,10 @@ class ReservationsController < ApplicationController
   def saitama
   end
 
+  def hospitals_list
+  end
+
+  def finish
+  end
+
 end
