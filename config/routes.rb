@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/tokyo' => 'reservations#toukyouto'
   get '/saitama' => 'reservations#satitamakenn'
   get '/finish' => 'reservations#finish'
-
+  get '/open_reserved_list' => 'reservations#open_reserved_list'
+  get '/confirm' => 'reservations#confirm'
 
 end
