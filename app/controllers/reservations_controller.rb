@@ -51,4 +51,7 @@ class ReservationsController < ApplicationController
   def hospitals_list
   end
 
+  def finish
+  end
+
 end
