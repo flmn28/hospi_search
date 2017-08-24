@@ -140,3 +140,20 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.time_table {
+	text-align: center;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+	text-align: center;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+	text-align: center;
+}
+
+.time_table > td, th {
+	width: 100px;
+	text-align: center;
+}
