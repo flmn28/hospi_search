@@ -20,8 +20,11 @@ Rails.application.routes.draw do
   get '/saitama' => 'reservations#satitamakenn'
   get '/hospitals_list' => 'reservations#hospitals_list'
   get '/finish' => 'reservations#finish'
+  root 'application#root'
   get '/open_reserved_list' => 'reservations#open_reserved_list'
   get '/confirm' => 'reservations#confirm'
+  get '/mypage' => 'patients#show'
+
 
   get '/reviews/new' => 'reviews#new'
   get '/reviews/list' => 'reviews#review_list'

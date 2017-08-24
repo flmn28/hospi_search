@@ -81,6 +81,44 @@ body {
 	margin-top: 20px;
 }
 
+.lists_main {
+	margin: 20px;
+}
+
+.list_title{
+	margin: 50px;
+}
+
+
+.list1 {
+	margin: 100px;
+	background: #fffde8;
+	box-shadow: 0px 0px 0px 10px #fffde8;// 線の外側
+	border: dashed 2px #ffb03f;// 破線
+	border-radius: 9px;
+	margin-left: 50px;// はみ出ないように調整
+	margin-right: 50px;//はみ出ないように調整
+	padding: 0.5em 0.5em 0.5em 2em;
+	position: relative;
+	list-style-type: none!important;// ポチ消す
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	line-height: 1.5;
+	background: #dbebf8;
+	vertical-align: middle;
+	color: #505050;
+	border-radius: 15px 0px 0px 15px;//左側の角丸く
+}
+
+.hospital_img {
+	align: left;
+}
+
+.hospital_info {
+	align: left;
+	border: solid 1px;
+	margin-right:20px;
+}
+
 .form_td {
 	height: 70px;
 	border: solid 1px;

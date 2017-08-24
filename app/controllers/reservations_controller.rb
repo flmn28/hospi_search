@@ -1,13 +1,17 @@
 class ReservationsController < ApplicationController
 
   def search_hospitals
-    # department取得の処理を書いたらopen_listアクションのdepartmentをparamsから取得するようにする
+    @departments = Department.all
+    @departments_array = []
+    @departments.each do |department|
+      @departments_array << [department.name, department.id]
+    end
   end
 
   def open_list
 
     @location = Location.find_by(prefecture: params[:prefecture], city: params[:city])
-    @department = Department.find_by(id: 1) #仮に
+    @department = Department.find_by(id: params[:department])
     @hospitals = @department.hospitals
 
     @local_hospitals = []
@@ -49,12 +53,13 @@ class ReservationsController < ApplicationController
   end
 
   def hospitals_list
-    @hospitals = []
-    @hospital_ids = params[:hospital_ids]
-    @hospital_ids.each do |hospital_id|
-      @hospital = Hospital.find_by(id: hospital_id)
-      @hospitals << @hospital
-    end
+    
+    # @hospitals = []
+    # @hospital_ids = params[:hospital_ids]
+    # @hospital_ids.each do |hospital_id|
+    #   @hospital = Hospital.find_by(id: hospital_id)
+    #   @hospitals << @hospital
+    # end
   end
 
   def finish
