@@ -27,8 +27,9 @@ Rails.application.routes.draw do
   get '/mypage' => 'patients#show'
   get '/reservation/:id' => 'reservations#show'
 
-  get '/reviews/new' => 'reviews#new'
-  get '/reviews/list' => 'reviews#review_list'
+  get '/reviews/new' => 'reviews#new', as: 'new_review'
+  get '/reviews/list' => 'reviews#review_list', as: 'hospital_reviews'
+  post '/reviews/create' => 'reviews#create', as: 'create_review'
 
 
 end
