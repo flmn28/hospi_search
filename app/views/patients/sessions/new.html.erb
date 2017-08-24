@@ -12,13 +12,14 @@
         <h2>Hospi Searchってなあに？</h2>
         <img src="<%= asset_path "example1.png" %>" width="150px" height="auto" />
         <img src="<%= asset_path "example2.png" %>" width="150px" height="auto" /> →
-        <img src="<%= asset_path "example3.png" %>" width="400px" height="auto" />
+        <img src="<%= asset_path "example3.png" %>" width="400px" height="auto" /><br />
         <div class="sell_points">
           <ol>
             <li>どこでも病院を予約可能！</li>
             <li>だれでも使いやすい！</li>
             <li>近くの病院の空き状況が一目でわかる！</li>
           </ol>
+          <%= link_to "病院を探してみる", search_hospitals_path, :class => 'btn btn-info' %>
         </div>
       </div>
       <div class="login col-sm-4">

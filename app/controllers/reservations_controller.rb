@@ -53,7 +53,7 @@ class ReservationsController < ApplicationController
   end
 
   def hospitals_list
-    
+
     # @hospitals = []
     # @hospital_ids = params[:hospital_ids]
     # @hospital_ids.each do |hospital_id|
@@ -66,10 +66,49 @@ class ReservationsController < ApplicationController
   end
 
   def open_reserved_list
+    @reservations = current_hospital.reservations
+
+    @reserve_date_time = Date.today.to_datetime + Rational(9, 24)
+    @reserved_time_candidates = []
+    for x in 1..7
+      for i in 1..18
+        @reserved_time_candidates << @reserve_date_time
+        @reserve_date_time += Rational(1, 48)
+      end
+      @reserve_date_time += Rational(15, 24)
+    end
+
+    @reserevations_array = []
+    @reserved_time_candidates.each do |reserved_time_candidate|
+      @current_reserevations = []
+      @reservations.each do |reservation|
+        if reservation.reserved_time == reserved_time_candidate
+          @current_reserevations << reservation
+        end
+      end
+
+      @reserevations_array << @current_reserevations
+    end
+  end
+
+  def reservations_list
+    @reservations = []
+    @reservation_ids = params[:reservation_ids]
+    @reservation_ids.each do |reservation_id|
+      @reservation = Reservation.find_by(id: reservation_id)
+      @reservations << @reservation
+    end
   end
 
   def confirm
   end
 
-end
+<<<<<<< HEAD
+  def show
+  end
 
+  end
+
+=======
+>>>>>>> a689511630758c35bbc39c95dae6439f02d8d436
+end

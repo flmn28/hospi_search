@@ -1,0 +1,8 @@
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+      <%= reservation.department.name %><br>
+      <%= reservation.patient.family_name_kanji %> <%= reservation.patient.first_name_kanji %>様
+    </li>
+  <% end %>
+</ul>
