@@ -12,8 +12,8 @@
 
 
 <div class="content2">
-<h3>予約内容</h3>
-<table style="table-layout: auto;">
+<h3>予約内容</h3> <hr>
+<table style="table-layout: auto; margin: 0 auto">
 <tr>
 <td class="form_td">病院</td><td class="form_td"><%= @reservation.hospital.name %></td>
 </tr>
@@ -28,6 +28,7 @@
 <td class="form_td">日時</td><td class="form_td"><%= @reservation.reserved_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %></td>
 </tr>
 </table>
+  <br />
   <%= link_to "検索画面に戻る", search_hospitals_path, method: :get %>
 </div>
 

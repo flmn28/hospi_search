@@ -1,17 +1,31 @@
-<h1>予約確認</h1>
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
+        <h1>Hospi Search</h1>
+        <p>パッと予約で、サッと診察！</p>
+      </div>
+    </div>
+  </div>
+    <div class="content_confirm" style="width: 500px; margin: 0 auto;">
 
+<h1>予約確認</h1>
+      <br>
 <%= form_tag finish_path, method: :get %>
 
   <%= image_tag 'hospital1.jpg', :size=>'100x100' %><br>
 
-  病院名: <%= @hospital.name %>
-  <%= hidden_field_tag :hospital_id, @hospital.id %><br>
-  診療科: <%= @department.name %>
-  <%= hidden_field_tag :department_id, @department.id %><br>
-  予約者: <%= current_patient.family_name_kanji %> <%= current_patient.first_name_kanji %>
-  <%= hidden_field_tag :patient_id, current_patient.id %><br>
-  日時: <%= @reservation_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %><br>
+  <h4>病院名: <%= @hospital.name %></h4>
+  <%= hidden_field_tag :hospital_id, @hospital.id %>
+      <h4>診療科: <%= @department.name %></h4>
+  <%= hidden_field_tag :department_id, @department.id %>
+      <h4>予約者: <%= current_patient.family_name_kanji %> <%= current_patient.first_name_kanji %></h4>
+  <%= hidden_field_tag :patient_id, current_patient.id %>
+      <h4>日時: <%= @reservation_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %></h4>
   <%= hidden_field_tag :reserved_time, @reservation_time %>
   <h3>この内容でよろしいですか？</h3>
 
 <%= submit_tag '予約' %>
+  </div>
+</div>
