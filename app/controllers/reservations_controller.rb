@@ -105,10 +105,10 @@ class ReservationsController < ApplicationController
   def confirm
     @hospital = Hospital.find_by(id: params[:hospital_id])
     @department = Department.find_by(id: params[:department_id])
-
   end
 
   def show
   end
 
 end
+
