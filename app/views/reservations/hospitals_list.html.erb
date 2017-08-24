@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="list_title">
-        <h2><%= @reservation_time %>にこの地域で</h2>
+        <h2><%= @reservation_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %>にこの地域で</h2>
         <h2><%= @department.name %>を予約できる病院： <%= @hospitals.count %>件</h2>
       </div>
       <div class="lists_main">

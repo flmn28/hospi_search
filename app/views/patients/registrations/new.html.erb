@@ -17,7 +17,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-  <table style="table-layout: auto;">
+  <table class="form_table" style="table-layout: auto;">
   <div class="field">
       <tr class="form_tr">
         <td class="form_td"><%= f.label :お名前（漢字）　%></td>
@@ -56,7 +56,7 @@
   <div class="field">
       <tr class="form_tr">
         <td class="form_td"><%= f.label :email, "Eメールアドレス" %></td>
-        <td colspan="2"><%= f.email_field :email %></td>
+        <td colspan="2" class="form_td"><%= f.email_field :email %></td>
       </tr>
   </div>
 
