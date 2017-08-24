@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'reviews/new'
+
   devise_for :patients, controllers: {
     sessions:      'patients/sessions',
     passwords:     'patients/passwords',
@@ -23,5 +25,8 @@ Rails.application.routes.draw do
   get '/confirm' => 'reservations#confirm'
   get '/mypage' => 'patients#show'
 
+
+  get '/reviews/new' => 'reviews#new'
+  get '/reviews/list' => 'reviews#review_list'
 
 end
