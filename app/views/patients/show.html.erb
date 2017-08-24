@@ -11,7 +11,7 @@
 
 <div class="show_main">
   <div class="content2">
-  <h2>にーのさんのマイページ</h2>
+  <h2><%= current_patient.family_name_kanji %><%= current_patient.first_name_kanji %>さんのマイページ</h2>
 
     <hr>
 
@@ -27,10 +27,10 @@
       </thead>
       <tbody>
       <tr>
-        <th>橋川 丈一郎</th>
-        <td>男</td>
-        <td>1658/7/4</td>
-        <td>nino@gmail.com</td>
+        <th><%= current_patient.family_name_kanji %><%= current_patient.first_name_kanji %></th>
+        <td><%= @gender %></td>
+        <td><%= current_patient.birthday.to_datetime.strftime("%Y/%m/%d") %></td>
+        <td><%= current_patient.email %></td>
       </tr>
       </tbody>
     </table>
@@ -44,22 +44,18 @@
         <th>病院名</th>
         <th>診療科</th>
         <th>予約日時</th>
-        <th>詳細</th>
+        <th></th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th>ほげほげ病院</th>
-        <td>内科</td>
-        <td>2017/8/24 9:00</td>
-        <td><%= link_to "詳細を確認する" %></td>
-      </tr>
-      <tr>
-        <th>ふがふが病院</th>
-        <td>外科</td>
-        <td>2017/8/27 13:30</td>
-        <td><%= link_to "詳細を確認する" %></td>
-      </tr>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <th><%= reservation.hospital.name %></th>
+            <td><%= reservation.department.name %></td>
+            <td><%= reservation.reserved_time.strftime("%Y/%m/%d %H:%M") %></td>
+            <td><%= link_to "キャンセルする" %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
 
