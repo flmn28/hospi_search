@@ -9,74 +9,48 @@
     </div>
     <div class="row">
       <div class="list_title">
-        <h2>この地域で予約できる病院 <%= "2件" %></h2>
+        <h2><%= @reservation_time %>にこの地域で</h2>
+        <h2><%= @department.name %>を予約できる病院： <%= @hospitals.count %>件</h2>
       </div>
       <div class="lists_main">
 
         <table style="width: 100%;">
-          <tr class="list1">
-            <td>
-              <div class="hospital_img">
-                <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
-              </div>
-            </td>
-            <td>
-              <table>
-                <tr class="hospital_name">
-                  <td>病院名</td>
-                  <td>東京医科大学病院</td>
-                </tr>
-                <tr class="hospital_address">
-                  <td>住所</td>
-                  <td>東京都 新宿区</td>
-                </tr>
-                <tr class="hospital_points">
-                  <td>評価</td>
-                  <td>★★☆☆☆</td>
-                </tr>
-              </table>
-                <button type="button" class="btn btn-default">詳細を見る</button>
-                <button type="button" class="btn btn-default">予約する</button>
-                  
-                </tr>
-            </td>
-          </tr>
 
-          <tr class="interval">
-            <td colspan="2">　</td>
-          </tr>
+          <% @hospitals.each do |hospital| %>
+            <tr class="list1">
+              <td>
+                <div class="hospital_img">
+                  <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
+                </div>
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td>病院名</td>
+                    <td class="hospital_name"><%= hospital.name %></td>
+                  </tr>
+                  <tr>
+                    <td>住所</td>
+                    <td class="hospital_address"><%= hospital.location.prefecture %> <%= hospital.location.city %></td>
+                  </tr>
+                  <tr>
+                    <td>評価</td>
+                    <td class="hospital_points">★☆☆☆☆</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <%= link_to '詳細を見る', '', class: 'btn btn-default' %>
+                      <%= link_to '予約する', confirm_path(hospital_id: hospital.id, department_id: @department.id, reservation_time: @reservation_time), class: 'btn btn-default' %>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-          <tr class="list1">
-            <td>
-              <div class="hospital_img">
-                <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
-              </div>
-            </td>
-            <td>
-              <table>
-                <tr>
-                  <td>病院名</td>
-                  <td class="hospital_name">東京ヤブ医者大学</td>
-                </tr>
-                <tr>
-                  <td>住所</td>
-                  <td class="hospital_address">東京都 新宿区</td>
-                </tr>
-                <tr>
-                  <td>評価</td>
-                  <td class="hospital_points">★☆☆☆☆</td>
-                </tr>
-                <tr>
-                  <td>[<a href="">詳細をみる</a>]</td>
-                </tr>
-                <tr>
-                  <td>
-                    <button type="button" class="btn btn-default">予約する</button>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+            <tr class="interval">
+              <td colspan="2">　</td>
+            </tr>
+          <% end %>
 
         </table>
         <button type="button" class="btn btn-default">戻る</button>
