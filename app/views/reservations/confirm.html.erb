@@ -1,14 +1,18 @@
 <h1>予約確認</h1>
-病院名:
-<br>
-<%= image_tag 'hospital1.jpg', :size=>'100x100' %>
-<br>
-診療科:
-<br>
-診察者:
-<br>
-日時:
-<br>
-<h3>この内容でよろしいですか？</h3>
+
+<%= form_tag 'url', method: :get %>
+
+
+  <%= image_tag 'hospital1.jpg', :size=>'100x100' %><br>
+
+  病院名: <%= @hospital.name %>
+  <%= hidden_field_tag :hospital_id, @hospital.id %><br>
+  診療科: <%= @department.name %>
+  <%= hidden_field_tag :department_id, @department.id %><br>
+  予約者: <%= current_user.name %>
+  <%= hidden_field_tag :patient_id, current_user.id %><br>
+  日時: <%=  %>
+  <br><%=  %>
+  <h3>この内容でよろしいですか？</h3>
 <%= link_to "予約", "finish" %>
 <%= link_to "戻る", "open_list" %>
