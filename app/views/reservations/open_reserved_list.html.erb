@@ -31,7 +31,7 @@
             <tr>
               <th scope="row"><%= Date.today %></th>
               <% for i in 0..5 %>
-                  <td></td>
+                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
               <% end %>
             </tr>
             <tr>

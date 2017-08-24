@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     if patient_signed_in?
       redirect_to search_hospitals_path
     elsif hospital_signed_in?
-      redirect_to search_hospitals_path #仮に
+      redirect_to open_reserved_list_path
     else
       redirect_to new_patient_session_path
     end
