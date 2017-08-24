@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
-
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
+        <h1>Hospi Search</h1>
+        <p>パッと予約で、サッと診察！</p>
+      </div>
+    </div>
+  </div>
+  <div class="content3">
+<h2>パスワードを再設定</h2>
+<h4>パスワード再設定メールを送信します。</h4>
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "メールアドレスを入力してください" %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "メールを送信" %>
   </div>
 <% end %>
+  </div>
 
 <%= render "hospitals/shared/links" %>
+</div>
