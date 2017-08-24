@@ -1,0 +1,209 @@
+<h2>予約状況</h2>
+
+<div id="reserve_tab">
+  <!-- タブの切替部分 -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#reserve_tabA" data-toggle="tab">9:00~12:00</a></li>
+    <li><a href="#reserve_tabB" data-toggle="tab">12:00~15:00</a></li>
+    <li><a href="#reserve_tabC" data-toggle="tab">15:00~18:00</a></li>
+  </ul>
+
+  <!-- タブのコンテンツ部分 -->
+  <div class="tab-content">
+
+    <div class="tab-pane active" id="reserve_tabA">
+      <div class="container">
+        <div class="table">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th></th>
+              <th>9:00~9:30</th>
+              <th>9:30~10:00</th>
+              <th>10:00~10:30</th>
+              <th>10:30~11:00</th>
+              <th>11:00~11:30</th>
+              <th>11:30~12:00</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <th scope="row"><%= Date.today %></th>
+              <% for i in 0..5 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 1 %></th>
+              <% for i in 18..23 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 2 %></th>
+              <% for i in 36..41 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 3 %></th>
+              <% for i in 54..59 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 4 %></th>
+              <% for i in 72..77 %>
+                <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 5 %></th>
+              <% for i in 90..95 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 6 %></th>
+              <% for i in 108..113 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="reserve_tabB">
+      <div class="container">
+        <div class="table">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th> </th>
+              <th>12:00~12:30</th>
+              <th>12:30~13:00</th>
+              <th>13:00~13:30</th>
+              <th>13:30~14:00</th>
+              <th>14:00~14:30</th>
+              <th>14:30~15:00</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row"><%= Date.today %></th>
+              <% for i in 6..11 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 1 %></th>
+              <% for i in 24..29 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 2 %></th>
+              <% for i in 42..47 %>
+                <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 3 %></th>
+              <% for i in 60..65 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 4 %></th>
+              <% for i in 78..83 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 5 %></th>
+              <% for i in 96..101 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 6 %></th>
+              <% for i in 114..119 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="reserve_tabC">
+      <div class="container">
+        <div class="table">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th> </th>
+              <th>15:00~15:30</th>
+              <th>15:30~16:00</th>
+              <th>16:00~16:30</th>
+              <th>16:30~17:00</th>
+              <th>17:00~17:30</th>
+              <th>17:30~18:00</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row"><%= Date.today %></th>
+              <% for i in 12..17 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 1 %></th>
+              <% for i in 30..35 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 2 %></th>
+              <% for i in 48..53 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 3 %></th>
+              <% for i in 66..71 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 4 %></th>
+              <% for i in 84..89 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 5 %></th>
+              <% for i in 102..107 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            <tr>
+              <th scope="row"><%= Date.today + 6 %></th>
+              <% for i in 120..125 %>
+                  <td></td>
+              <% end %>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-default">戻る</button>

@@ -60,4 +60,11 @@ class ReservationsController < ApplicationController
   def finish
   end
 
+  def open_reserved_list
+  end
+
+  def confirm
+  end
+
 end
+
