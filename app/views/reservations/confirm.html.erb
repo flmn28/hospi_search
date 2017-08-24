@@ -1,7 +1,6 @@
 <h1>予約確認</h1>
 
-<%= form_tag 'url', method: :get %>
-
+<%= form_tag finish_path, method: :get %>
 
   <%= image_tag 'hospital1.jpg', :size=>'100x100' %><br>
 
@@ -9,10 +8,10 @@
   <%= hidden_field_tag :hospital_id, @hospital.id %><br>
   診療科: <%= @department.name %>
   <%= hidden_field_tag :department_id, @department.id %><br>
-  予約者: <%= current_user.name %>
-  <%= hidden_field_tag :patient_id, current_user.id %><br>
-  日時: <%=  %>
-  <br><%=  %>
+  予約者: <%= current_patient.family_name_kanji %> <%= current_patient.first_name_kanji %>
+  <%= hidden_field_tag :patient_id, current_patient.id %><br>
+  日時: <%= @reservation_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %><br>
+  <%= hidden_field_tag :reserved_time, @reservation_time %>
   <h3>この内容でよろしいですか？</h3>
-<%= link_to "予約", "finish" %>
-<%= link_to "戻る", "open_list" %>
+
+<%= submit_tag '予約' %>
