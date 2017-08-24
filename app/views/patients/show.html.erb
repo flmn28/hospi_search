@@ -1,9 +1,68 @@
-<div class="show_main">
-  <h2>マイページ</h2>
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
+        <h1>Hospi Search</h1>
+        <p>パッと予約で、サッと診察！</p>
+      </div>
+    </div>
+  </div>
 
-  <div class="reservation_status">
-    現在の予約
-    予約の詳細を確認する
+<div class="show_main">
+  <div class="content2">
+  <h2>にーのさんのマイページ</h2>
+
+    <hr>
+
+    <h3>あなたの情報</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>名前</th>
+        <th>性別</th>
+        <th>生年月日</th>
+        <th>メールアドレス</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>橋川 丈一郎</th>
+        <td>男</td>
+        <td>1658/7/4</td>
+        <td>nino@gmail.com</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h3>予約一覧</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>病院名</th>
+        <th>診療科</th>
+        <th>予約日時</th>
+        <th>詳細</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>ほげほげ病院</th>
+        <td>内科</td>
+        <td>2017/8/24 9:00</td>
+        <td><%= link_to "詳細を確認する" %></td>
+      </tr>
+      <tr>
+        <th>ふがふが病院</th>
+        <td>外科</td>
+        <td>2017/8/27 13:30</td>
+        <td><%= link_to "詳細を確認する" %></td>
+      </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 </div>
