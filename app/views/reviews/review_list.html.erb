@@ -44,10 +44,12 @@
               <th>レビュー</th>
             </tr>
           </thead>
-          <tr>
-            <th class="reviewer">にーの</th>
-            <th>ヤブ医者！！！！！！！診察中にセクハラな発言をされた！！！！！！！もう二度と行きたくないです！！！！！！！</th>
-          </tr>
+          <% @reviews.each do |review| %>
+            <tr>
+              <th class="reviewer"><%= review.name %></th>
+              <th><%= review.comment %></th>
+            </tr>
+          <% end %>
         </table>
 
         <tr class="interval">

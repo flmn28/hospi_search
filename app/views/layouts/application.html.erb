@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HospiSearch1</title>
+    <title>HospiSearch</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +17,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <%= link_to "Hospi Search", '', class: "navbar-brand" %>
+            <%= link_to "Hospi Search", root_path, class: "navbar-brand", method: :get %>
           </div>
 
           <div class="collapse navbar-collapse target">

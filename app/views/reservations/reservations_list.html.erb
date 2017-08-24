@@ -14,51 +14,36 @@
 <div class="lists_patients">
   <table style="width: 100%;", border="1">
 
-        <tr class="list1">
-          <td>
-            <table>
-              <tr>
-                <td align="left">患者名</td>
-                <td align="left">橋川 丈一郎様</td>
-              </tr>
-              <tr>
-                <td align="left">性別</td>
-                <td align="left">男</td>
-              </tr>
-              <tr>
-                <td align="left">生年月日</td>
-                <td align="left">1687/7/12</td>
-              </tr>
-              <tr>
-                <td align="left">診療科</td>
-                <td align="left">内科</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-    <tr class="list2">
-      <td>
-        <table>
-          <tr>
-            <td align="left">患者名</td>
-            <td align="left">紫垣 龍征様</td>
-          </tr>
-          <tr>
-            <td align="left">性別</td>
-            <td align="left">男</td>
-          </tr>
-          <tr>
-            <td align="left">生年月日</td>
-            <td align="left">1998/6/26</td>
-          </tr>
-          <tr>
-            <td align="left">診療科</td>
-            <td align="left">外科</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+    <% @reservations.each do |reservation| %>
+      <tr class="list1">
+        <td>
+          <table>
+            <tr>
+              <td align="left">診療科：</td>
+              <td align="left"><%= reservation.department.name %></td>
+            </tr>
+            <tr>
+              <td align="left">患者名：</td>
+              <td align="left"><%= reservation.patient.family_name_kanji %> <%= reservation.patient.first_name_kanji %></td>
+            </tr>
+            <tr>
+              <td align="left">性別：</td>
+              <td align="left">
+                <% if reservation.patient.gender %>
+                  男
+                <% else %>
+                  女
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">生年月日：</td>
+              <td align="left"><%= reservation.patient.birthday.to_datetime.strftime("%Y/%m/%d") %></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    <% end %>
 
   </table>
   <br />

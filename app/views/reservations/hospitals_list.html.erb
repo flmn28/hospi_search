@@ -30,17 +30,13 @@
                     <td class="hospital_name"><%= hospital.name %></td>
                   </tr>
                   <tr>
-                    <td>住所</td>
+                    <td>所在地</td>
                     <td class="hospital_address"><%= hospital.location.prefecture %> <%= hospital.location.city %></td>
                   </tr>
-                  <tr>
-                    <td>評価</td>
-                    <td class="hospital_points">★☆☆☆☆</td>
-                  </tr>
-                  <tr>
+                  <tr style="line-height: 70px;">
                     <td>
-                      <%= link_to '詳細を見る', '', class: 'btn btn-default' %>
-                      <%= link_to '予約する', confirm_path(hospital_id: hospital.id, department_id: @department.id, reservation_time: @reservation_time), class: 'btn btn-default' %>
+                      <%= link_to '詳細を見る', hospital_reviews_path(hospital_id: hospital.id), class: 'btn btn-default btn-lg' %>
+                      <%= link_to '予約する', confirm_path(hospital_id: hospital.id, department_id: @department.id, reservation_time: @reservation_time), class: 'btn btn-default btn-lg' %>
                     </td>
                   </tr>
                 </table>

@@ -1,13 +1,18 @@
-<h1>レビューを投稿</h1>
+<h2>レビューを投稿</h2>
 
-<%= form_for @reviews do |f| %>
-    <%= f.text_area :nickname %>
-    <%= f.label "コメント" %>
-    <%= f.text_area :comment %>
-    星いくつでしょうか？<br />
-    <label><%= f.radio_button :stars, 1 %>星1つ</label>
-    <label><%= f.radio_button :stars, 2 %>星2つ</label>
-    <label><%= f.radio_button :stars, 3 %>星3つ</label>
-    <label><%= f.radio_button :stars, 4 %>星4つ</label>
-    <label><%= f.radio_button :stars, 5 %>星5つ</label>
+
+<h3>病院名： <%= @hospital.name %></h3>
+
+<%= form_tag create_review_path do %>
+  <div>
+    <%= label_tag :name, 'ニックネーム' %>：
+    <%= text_field_tag :name, '' %>
+  </div>
+  <div>
+    <%= label_tag :comment, 'コメント' %>：
+    <%= text_area_tag :comment, '' %>
+  </div>
+
+  <%= hidden_field_tag :hospital_id, @hospital.id  %>
+  <%= submit_tag '投稿する' %>
 <% end %>
