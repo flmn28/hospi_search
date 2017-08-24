@@ -53,7 +53,7 @@ class ReservationsController < ApplicationController
   end
 
   def hospitals_list
-    
+
     # @hospitals = []
     # @hospital_ids = params[:hospital_ids]
     # @hospital_ids.each do |hospital_id|
@@ -71,5 +71,9 @@ class ReservationsController < ApplicationController
   def confirm
   end
 
-end
+  def show
+  end
 
+  end
+
+end
