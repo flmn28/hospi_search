@@ -1,15 +1,52 @@
-<br>
-<h1>ほげほげ病院のレビュー</h1>
-<br>
-<table class="table">
-  <thead>
-    <tr>
-      <th>投稿者</th>
-      <th>レビュー</th>
-    </tr>
-  </thead>
-  <tr>
-    <th>にーの</th>
-    <th>ヤブ医者！！！！！！！診察中にセクハラな発言をされた！！！！！！！もう二度と行きたくないです！！！！！！！</th>
-  </tr>
-</table>
+<div class="review_main">
+  <div class="container">
+    <h1>病院の情報</h1>
+    <table style="width: 100%;">
+
+        <tr class="list">
+          <td>
+            <div class="hospital_img">
+              <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
+            </div>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td>病院名</td>
+                <td class="hospital_name">hospital_name</td>
+              </tr>
+              <tr>
+                <td>住所</td>
+                <td class="hospital_address">hospital.location.prefecture都 hospital.location.city区</td>
+              </tr>
+              <tr>
+                <td>Eメールアドレス</td>
+                <td class="hospital_mail">hogehoge@outlook.com</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="interval">
+          <td colspan="2">　</td>
+        </tr>
+
+    </table>
+
+      <div class="content">
+        <h2>病院の情報</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="reviewer">投稿者</th>
+              <th>レビュー</th>
+            </tr>
+          </thead>
+          <tr>
+            <th class="reviewer">にーの</th>
+            <th>ヤブ医者！！！！！！！診察中にセクハラな発言をされた！！！！！！！もう二度と行きたくないです！！！！！！！</th>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div>
