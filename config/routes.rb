@@ -19,5 +19,9 @@ Rails.application.routes.draw do
   get '/hospitals_list' => 'reservations#hospitals_list'
   get '/finish' => 'reservations#finish'
 
+<<<<<<< HEAD
+=======
+  root 'application#root'
+>>>>>>> 3d12f098e6be47f60c4ac9d50267026b2a88a8bb
 
 end
