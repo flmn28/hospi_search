@@ -61,4 +61,3 @@ gem 'devise'
 gem 'pry-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt'
-
