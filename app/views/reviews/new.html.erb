@@ -1,0 +1,13 @@
+<h1>レビューを投稿</h1>
+
+<%= form_for @reviews do |f| %>
+    <%= f.text_area :nickname %>
+    <%= f.label "コメント" %>
+    <%= f.text_area :comment %>
+    星いくつでしょうか？<br />
+    <label><%= f.radio_button :stars, 1 %>星1つ</label>
+    <label><%= f.radio_button :stars, 2 %>星2つ</label>
+    <label><%= f.radio_button :stars, 3 %>星3つ</label>
+    <label><%= f.radio_button :stars, 4 %>星4つ</label>
+    <label><%= f.radio_button :stars, 5 %>星5つ</label>
+<% end %>

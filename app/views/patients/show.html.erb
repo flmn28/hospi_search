@@ -1,2 +1,14 @@
-<h1>Patients#show</h1>
-<p>Find me in app/views/patients/show.html.erb</p>
+<div class="show_main">
+  <h2>マイページ</h2>
+
+  <div class="reservation_status">
+    予約状況<br/>
+    予約していれば状況を表示？
+    <div class="show_lists">
+      <ul>
+        <li>予約履歴を確認する</li>
+        <li><%=link_to"予約をキャンセルする", "/patients/sign_in" %></li>
+      </ul>
+    </div>
+  </div>
+</div>
