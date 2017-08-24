@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   get '/open_list' => 'reservations#open_list'
   get '/tokyo' => 'reservations#toukyouto'
   get '/saitama' => 'reservations#satitamakenn'
+  get '/finish' => 'reservations#finish'
+
 
 end
