@@ -106,12 +106,7 @@ class ReservationsController < ApplicationController
 
   end
 
-<<<<<<< HEAD
   def show
   end
 
-  end
-
-=======
->>>>>>> a689511630758c35bbc39c95dae6439f02d8d436
 end
