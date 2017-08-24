@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f662cd5d-00b4-47f3-9f4a-64c6cd932984" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/hospitals/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/hospitals/passwords/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/passwords/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reservations/finish.html.erb" afterPath="$PROJECT_DIR$/app/views/reservations/finish.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/show.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/show.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -24,8 +22,18 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/hospitals/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state relative-caret-position="459">
+              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -61,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finish.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finish.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reservations/finish.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -104,6 +112,7 @@
         <option value="$PROJECT_DIR$/app/views/patients/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hospitals/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reservations/finish.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/patients/show.html.erb" />
       </list>
     </option>
   </component>
@@ -159,12 +168,6 @@
               <item name="hospi_search1" type="b2602c69:ProjectViewProjectNode" />
               <item name="hospi_search1" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospi_search1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospi_search1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -172,7 +175,7 @@
               <item name="hospi_search1" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="reservations" type="462c0819:PsiDirectoryNode" />
+              <item name="patients" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hospi_search1" type="b2602c69:ProjectViewProjectNode" />
@@ -306,12 +309,12 @@
       <updated>1503463519691</updated>
       <workItem from="1503463525357" duration="7433000" />
       <workItem from="1503471013095" duration="11160000" />
-      <workItem from="1503535889317" duration="21229000" />
+      <workItem from="1503535889317" duration="22249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39822000" />
+    <option name="totallyTimeSpent" value="40842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -614,14 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reservations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -678,14 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hospitals/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hospitals/passwords/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -709,6 +696,22 @@
           <folding>
             <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/hospitals/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
