@@ -15,20 +15,20 @@
 <h3>予約内容</h3>
 <table style="table-layout: auto;">
 <tr>
-<td class="form_td">病院</td><td class="form_td">ほげほげ病院</td>
+<td class="form_td">病院</td><td class="form_td"><%= @reservation.hospital.name %></td>
 </tr>
 <tr>
 <td class="form_td">外観</td>
 <td class="form_td" ><img src="<%= asset_path "icon.png" %>" width = "300px" height="auto"></img></td>
 </tr>
 <tr>
-<td class="form_td">診療科</td><td class="form_td">内科</td>
+<td class="form_td">診療科</td><td class="form_td"><%= @reservation.department.name %></td>
 </tr>
 <tr>
-<td class="form_td">日時</td><td class="form_td">2017/07/22</td>
+<td class="form_td">日時</td><td class="form_td"><%= @reservation.reserved_time.to_datetime.strftime("%Y年%m月%d日 %H時%M分") %></td>
 </tr>
 </table>
-  <%= link_to "検索画面に戻る", "search_hospitals_path" %>
+  <%= link_to "検索画面に戻る", search_hospitals_path, method: :get %>
 </div>
 
 </div>

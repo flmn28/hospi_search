@@ -65,6 +65,7 @@ class ReservationsController < ApplicationController
   end
 
   def finish
+    @reservation = Reservation.create(patient_id: current_patient.id, hospital_id: params[:hospital_id], department_id: params[:department_id], reserved_time: params[:reserved_time])
   end
 
   def open_reserved_list
@@ -105,10 +106,10 @@ class ReservationsController < ApplicationController
   def confirm
     @hospital = Hospital.find_by(id: params[:hospital_id])
     @department = Department.find_by(id: params[:department_id])
+    @reservation_time = params[:reservation_time]
   end
 
   def show
   end
 
 end
-
