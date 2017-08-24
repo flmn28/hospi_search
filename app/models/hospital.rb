@@ -8,4 +8,8 @@ class Hospital < ApplicationRecord
   has_many :reservations
   has_many :hospitals_departments
   has_many :departments, through: :hospitals_departments
+
+  def location
+    Location.find_by(id: self.location_id)
+  end
 end
