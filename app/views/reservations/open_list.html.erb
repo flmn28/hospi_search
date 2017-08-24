@@ -1,293 +1,382 @@
-<h2>希望の日時をクリックしてください</h2>
-
-<div id="reserve_tab">
-    <!-- タブの切替部分 -->
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#reserve_tabA" data-toggle="tab">9:00~12:00</a></li>
-        <li><a href="#reserve_tabB" data-toggle="tab">12:00~15:00</a></li>
-        <li><a href="#reserve_tabC" data-toggle="tab">15:00~18:00</a></li>
-    </ul>
-
-    <!-- タブのコンテンツ部分 -->
-    <div class="tab-content">
-
-        <div class="tab-pane active" id="reserve_tabA">
-          <div class="container">
-            <div class="table">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>9:00~9:30</th>
-                    <th>9:30~10:00</th>
-                    <th>10:00~10:30</th>
-                    <th>10:30~11:00</th>
-                    <th>11:00~11:30</th>
-                    <th>11:30~12:00</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <th scope="row"><%= Date.today %></th>
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
+        <h1>Hospi Search</h1>
+        <p>パッと予約で、サッと診察！</p>
+      </div>
+    </div>
+      <div class="">
+      <h2>希望の日時をクリックしてください</h2>
+      <p>その時間に空いている病院の件数が表示されます。<br>
+      クリックすると、病院一覧を表示します。</p>
+      <div id="reserve_tab">
+        <!-- タブの切替部分 -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#reserve_tabA" data-toggle="tab">9:00~12:00</a></li>
+          <li><a href="#reserve_tabB" data-toggle="tab">12:00~15:00</a></li>
+          <li><a href="#reserve_tabC" data-toggle="tab">15:00~18:00</a></li>
+        </ul>
+        <!-- タブのコンテンツ部分 -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="reserve_tabA">
+              <div class="table">
+                <table class="table table-bordered time_table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>9:00~9:30</th>
+                      <th>9:30~10:00</th>
+                      <th>10:00~10:30</th>
+                      <th>10:30~11:00</th>
+                      <th>11:00~11:30</th>
+                      <th>11:30~12:00</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today %>
+                      </th>
                       <% for i in 0..5 %>
                         <% if @open_hospitals_array[i].count == 0 %>
                           <td>0件</td>
-                        <% else %>
-                          <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                        <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 1 %></th>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 1 %>
+                      </th>
                       <% for i in 18..23 %>
                         <% if @open_hospitals_array[i].count == 0 %>
                           <td>0件</td>
-                        <% else %>
-                          <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                        <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 2 %></th>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 2 %>
+                      </th>
                       <% for i in 36..41 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 3 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 3 %>
+                      </th>
                       <% for i in 54..59 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 4 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 4 %>
+                      </th>
                       <% for i in 72..77 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 5 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 5 %>
+                      </th>
                       <% for i in 90..95 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 6 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 6 %>
+                      </th>
                       <% for i in 108..113 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                </tbody>
-              </table>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                  </tbody>
+                </table>
+              
             </div>
           </div>
-        </div>
-
-        <div class="tab-pane" id="reserve_tabB">
-          <div class="container">
-            <div class="table">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th> </th>
-                    <th>12:00~12:30</th>
-                    <th>12:30~13:00</th>
-                    <th>13:00~13:30</th>
-                    <th>13:30~14:00</th>
-                    <th>14:00~14:30</th>
-                    <th>14:30~15:00</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"><%= Date.today %></th>
-                    <% for i in 6..11 %>
-                    <% if @open_hospitals_array[i].count == 0 %>
-                      <td>0件</td>
-                    <% else %>
-                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                    <% end %>
-                    <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 1 %></th>
+          <div class="tab-pane" id="reserve_tabB">
+              <div class="table">
+                <table class="table table-bordered time_table">
+                  <thead>
+                    <tr>
+                      <th> </th>
+                      <th>12:00~12:30</th>
+                      <th>12:30~13:00</th>
+                      <th>13:00~13:30</th>
+                      <th>13:30~14:00</th>
+                      <th>14:00~14:30</th>
+                      <th>14:30~15:00</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today %>
+                      </th>
+                      <% for i in 6..11 %>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 1 %>
+                      </th>
                       <% for i in 24..29 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 2 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 2 %>
+                      </th>
                       <% for i in 42..47 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 3 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 3 %>
+                      </th>
                       <% for i in 60..65 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 4 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 4 %>
+                      </th>
                       <% for i in 78..83 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 5 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 5 %>
+                      </th>
                       <% for i in 96..101 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 6 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 6 %>
+                      </th>
                       <% for i in 114..119 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            
           </div>
-        </div>
-
-        <div class="tab-pane" id="reserve_tabC">
-          <div class="container">
-            <div class="table">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th> </th>
-                    <th>15:00~15:30</th>
-                    <th>15:30~16:00</th>
-                    <th>16:00~16:30</th>
-                    <th>16:30~17:00</th>
-                    <th>17:00~17:30</th>
-                    <th>17:30~18:00</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"><%= Date.today %></th>
-                    <% for i in 12..17 %>
-                    <% if @open_hospitals_array[i].count == 0 %>
-                      <td>0件</td>
-                    <% else %>
-                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                    <% end %>
-                    <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 1 %></th>
+          <div class="tab-pane" id="reserve_tabC">
+              <div class="table">
+                <table class="table table-bordered time_table">
+                  <thead>
+                    <tr>
+                      <th> </th>
+                      <th>15:00~15:30</th>
+                      <th>15:30~16:00</th>
+                      <th>16:00~16:30</th>
+                      <th>16:30~17:00</th>
+                      <th>17:00~17:30</th>
+                      <th>17:30~18:00</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today %>
+                      </th>
+                      <% for i in 12..17 %>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 1 %>
+                      </th>
                       <% for i in 30..35 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 2 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 2 %>
+                      </th>
                       <% for i in 48..53 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 3 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 3 %>
+                      </th>
                       <% for i in 66..71 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 4 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 4 %>
+                      </th>
                       <% for i in 84..89 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 5 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 5 %>
+                      </th>
                       <% for i in 102..107 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                  <tr>
-                    <th scope="row"><%= Date.today + 6 %></th>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <%= Date.today + 6 %>
+                      </th>
                       <% for i in 120..125 %>
-                      <% if @open_hospitals_array[i].count == 0 %>
-                        <td>0件</td>
-                      <% else %>
-                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %></td>
-                      <% end %>
-                      <% end %>
-                  </tr>
-                </tbody>
-              </table>
+                        <% if @open_hospitals_array[i].count == 0 %>
+                          <td>0件</td>
+                          <% else %>
+                            <td>
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            </td>
+                            <% end %>
+                              <% end %>
+                    </tr>
+                  </tbody>
+                </table>
+            
             </div>
           </div>
         </div>
+      </div>
+      <button type="button" class="btn btn-default">戻る</button>
     </div>
+  </div>
 </div>
-
-<button type="button" class="btn btn-default">戻る</button>
