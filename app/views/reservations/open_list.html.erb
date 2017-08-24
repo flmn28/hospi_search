@@ -31,43 +31,43 @@
                   <tr>
                     <th scope="row"><%= Date.today %></th>
                     <% for i in 0..5 %>
-                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(@open_hospitals_array[i].pluck(:id)) %></td>
+                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                     <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 1 %></th>
                       <% for i in 18..23 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 2 %></th>
                       <% for i in 36..41 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 3 %></th>
                       <% for i in 54..59 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 4 %></th>
                       <% for i in 72..77 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 5 %></th>
                       <% for i in 90..95 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 6 %></th>
                       <% for i in 108..113 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                 </tbody>
@@ -95,43 +95,43 @@
                   <tr>
                     <th scope="row"><%= Date.today %></th>
                     <% for i in 6..11 %>
-                      <td><%= @open_hospitals_array[i].count %></td>
+                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                     <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 1 %></th>
                       <% for i in 24..29 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 2 %></th>
                       <% for i in 42..47 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 3 %></th>
                       <% for i in 60..65 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 4 %></th>
                       <% for i in 78..83 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 5 %></th>
                       <% for i in 96..101 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 6 %></th>
                       <% for i in 114..119 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                 </tbody>
@@ -159,43 +159,43 @@
                   <tr>
                     <th scope="row"><%= Date.today %></th>
                     <% for i in 12..17 %>
-                      <td><%= @open_hospitals_array[i].count %></td>
+                      <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                     <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 1 %></th>
                       <% for i in 30..35 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 2 %></th>
                       <% for i in 48..53 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 3 %></th>
                       <% for i in 66..71 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 4 %></th>
                       <% for i in 84..89 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 5 %></th>
                       <% for i in 102..107 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                   <tr>
                     <th scope="row"><%= Date.today + 6 %></th>
                       <% for i in 120..125 %>
-                        <td><%= @open_hospitals_array[i].count %></td>
+                        <td><%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id)) %></td>
                       <% end %>
                   </tr>
                 </tbody>
