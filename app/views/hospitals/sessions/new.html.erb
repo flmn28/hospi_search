@@ -1,3 +1,14 @@
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
+        <h1>Hospi Search</h1>
+        <p>パッと予約で、サッと診察！</p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -22,5 +33,7 @@
     <%= f.submit "ログインする" %>
   </div>
 <% end %>
+  </div>
 
 <%= render "hospitals/shared/links" %>
+</div>
