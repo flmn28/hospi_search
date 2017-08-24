@@ -1,40 +1,42 @@
-<div class="review_main">
+<div class="main">
   <div class="container">
-    <h1>病院の情報</h1>
-    <table style="width: 100%;">
+    <div class="row">
+      <h1>病院の情報</h1>
 
-        <tr class="list">
-          <td>
-            <div class="hospital_img">
-              <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
-            </div>
-          </td>
-          <td>
-            <table>
-              <tr>
-                <td>病院名</td>
-                <td class="hospital_name">hospital_name</td>
-              </tr>
-              <tr>
-                <td>住所</td>
-                <td class="hospital_address">hospital.location.prefecture都 hospital.location.city区</td>
-              </tr>
-              <tr>
-                <td>Eメールアドレス</td>
-                <td class="hospital_mail">hogehoge@outlook.com</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+      <div class="lists_main">
+        <table style="width: 100%;">
+          <tr class="list1">
+            <td>
+              <div class="hospital_img">
+                <img src="<%= asset_path "hospitalA.png" %>" width="256px" height="auto" />
+              </div>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>病院名</td>
+                  <td class="hospital_name">hospital_name</td>
+                </tr>
+                <tr>
+                  <td>住所</td>
+                  <td class="hospital_address">hospital.location.prefecture都 hospital.location.city区</td>
+                </tr>
+                <tr>
+                  <td>Eメールアドレス</td>
+                  <td>hogehoge@outlook.com</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-        <tr class="interval">
-          <td colspan="2">　</td>
-        </tr>
-
-    </table>
+          <tr class="interval">
+            <td colspan="2">　</td>
+          </tr>
+      </table>
+    </div>
 
       <div class="content">
-        <h2>病院の情報</h2>
+        <h2>この病院で診察を受けた人のレビュー</h2>
         <table class="table">
           <thead>
             <tr>
@@ -47,6 +49,13 @@
             <th>ヤブ医者！！！！！！！診察中にセクハラな発言をされた！！！！！！！もう二度と行きたくないです！！！！！！！</th>
           </tr>
         </table>
+
+        <tr class="interval">
+          <td colspan="2">　</td>
+        </tr>
+
       </div>
+      <button type="button" class="btn btn-default">戻る</button>
+    </div>
   </div>
 </div>
