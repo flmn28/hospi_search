@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get '/saitama' => 'reservations#satitamakenn'
   get '/finish' => 'reservations#finish'
 
+
 end
