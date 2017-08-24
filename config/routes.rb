@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   root 'application#root'
   get '/open_reserved_list' => 'reservations#open_reserved_list'
   get '/confirm' => 'reservations#confirm'
+  get '/mypage' => 'patients#show'
+
 
 end
