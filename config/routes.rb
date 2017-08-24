@@ -24,10 +24,11 @@ Rails.application.routes.draw do
   get '/open_reserved_list' => 'reservations#open_reserved_list'
   get '/reservations_list' => 'reservations#reservations_list'
   get '/confirm' => 'reservations#confirm'
-
   get '/mypage' => 'patients#show'
+  get '/reservation/:id' => 'reservations#show'
 
   get '/reviews/new' => 'reviews#new'
   get '/reviews/list' => 'reviews#review_list'
+
 
 end

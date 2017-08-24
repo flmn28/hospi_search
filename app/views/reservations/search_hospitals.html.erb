@@ -1,37 +1,39 @@
 <div class="main">
   <div class="container">
     <div class="title">
-<div class="row">
+      <div class="row">
         <img src="<%= asset_path "icon.png" %>" width="200px" height="auto" />
         <h1>Hospi Search</h1>
         <p>パッと予約で、サッと診察！</p>
+      </div>
     </div>
-</div>
-<div class="row">
-<div class="content2">
-<h2><img src="<%= asset_path "search.png" %>" width="30px" height="auto" />病院を検索</h2><br>
-<table>
-<tr>
-<td class="form_td">地域を入力してください</td>
-<td class="form_td">都道府県
-<%= form_tag(open_list_path, method: :get) %>
-<div><%= text_field_tag :prefecture, "" %></div>
-市区町村
-<div><%= text_field_tag :city, "" %></div>
-</td>
-
-<tr>
-<td class="form_td">診療科を選択してください</td>
-<td class="form_td">
-<%= select_tag :department, options_for_select(@departments_array) %>
-</td>
-</tr>
-</table>
-
-<div class="form_submit">
-<%= submit_tag "病院を探す" %>
-</div>
-</div>
-</div>
-</div>
+    <div class="row">
+      <div class="content2">
+        <h2><img src="<%= asset_path "search.png" %>" width="30px" height="auto" />病院を検索</h2>
+        <table class="form_table">
+          <tr>
+            <td class="form_td">地域を入力してください</td>
+            <td class="form_td">都道府県
+              <%= form_tag(open_list_path, method: :get) %>
+                <div>
+                  <%= text_field_tag :prefecture, "" %>
+                </div>
+                市区町村
+                <div>
+                  <%= text_field_tag :city, "" %>
+                </div>
+            </td>
+            <tr>
+              <td class="form_td">診療科を選択してください</td>
+              <td class="form_td">
+                <%= select_tag :department, options_for_select(@departments_array) %>
+              </td>
+            </tr>
+        </table>
+        <div class="form_submit">
+          <%= submit_tag "病院を探す" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
