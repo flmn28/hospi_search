@@ -36,7 +36,11 @@
                   <tr style="line-height: 70px;">
                     <td>
                       <%= link_to '詳細を見る', hospital_reviews_path(hospital_id: hospital.id), class: 'btn btn-default btn-lg' %>
-                      <%= link_to '予約する', confirm_path(hospital_id: hospital.id, department_id: @department.id, reservation_time: @reservation_time), class: 'btn btn-default btn-lg' %>
+                      <% if patient_signed_in? %>
+                        <%= link_to '予約する', confirm_path(hospital_id: hospital.id, department_id: @department.id, reservation_time: @reservation_time), class: 'btn btn-default btn-lg' %>
+                      <% else %>
+                        </td><td><small style="font-size: 16px;">予約をするにはログインする必要があります</small>
+                      <% end %>
                     </td>
                   </tr>
                 </table>
