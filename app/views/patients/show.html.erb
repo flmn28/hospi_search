@@ -53,7 +53,7 @@
             <th><%= reservation.hospital.name %></th>
             <td><%= reservation.department.name %></td>
             <td><%= reservation.reserved_time.strftime("%Y/%m/%d %H:%M") %></td>
-            <td><%= link_to "予約をキャンセルする", '', class: 'btn btn-default' %> <%= link_to "この病院のレビューを書く", new_review_path(hospital_id: reservation.hospital.id), class: 'btn btn-default'%></td>
+            <td><%= link_to "この病院の詳細を見る", hospital_reviews_path(hospital_id: reservation.hospital.id), class: 'btn btn-default'%> <%= link_to "予約をキャンセルする", '', class: 'btn btn-default' %></td>
           </tr>
         <% end %>
       </tbody>

@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(name: params[:name], comment: params[:comment], hospital_id: params[:hospital_id])
-    redirect_to hospital_reviews_path(params[:hospital_id].to_i)
+    redirect_to hospital_reviews_path(hospital_id: params[:hospital_id].to_i)
   end
 
   def review_list
