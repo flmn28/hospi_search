@@ -43,43 +43,71 @@
             <tr>
               <th scope="row"><%= Date.today %></th>
               <% for i in 0..5 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+                <% if @reserevations_array[i].count == 0 %>
+                  <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+                <% else %>
+                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+                <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 1 %></th>
               <% for i in 18..23 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 2 %></th>
               <% for i in 36..41 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 3 %></th>
               <% for i in 54..59 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 4 %></th>
               <% for i in 72..77 %>
-                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 5 %></th>
               <% for i in 90..95 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 6 %></th>
               <% for i in 108..113 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             </tbody>
@@ -105,43 +133,71 @@
             <tr>
               <th scope="row"><%= Date.today %></th>
               <% for i in 6..11 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 1 %></th>
               <% for i in 24..29 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 2 %></th>
               <% for i in 42..47 %>
-                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 3 %></th>
               <% for i in 60..65 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 4 %></th>
               <% for i in 78..83 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 5 %></th>
               <% for i in 96..101 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 6 %></th>
               <% for i in 114..119 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             </tbody>
@@ -167,43 +223,71 @@
             <tr>
               <th scope="row"><%= Date.today %></th>
               <% for i in 12..17 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 1 %></th>
               <% for i in 30..35 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 2 %></th>
               <% for i in 48..53 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 3 %></th>
               <% for i in 66..71 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 4 %></th>
               <% for i in 84..89 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 5 %></th>
               <% for i in 102..107 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             <tr>
               <th scope="row"><%= Date.today + 6 %></th>
               <% for i in 120..125 %>
-                  <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)) %></td>
+              <% if @reserevations_array[i].count == 0 %>
+                <td style="background-color: #eee;"><span style="font-size: 16px;">0件</span></td>
+              <% else %>
+                <td><%= link_to "#{@reserevations_array[i].count}名", reservations_list_path(reservation_ids: @reserevations_array[i].pluck(:id)), class: 'count_reservations' %></td>
+              <% end %>
               <% end %>
             </tr>
             </tbody>
@@ -214,4 +298,3 @@
 </div>
   </div>
 </div>
-<button type="button" class="btn btn-default">戻る</button>

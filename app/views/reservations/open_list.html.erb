@@ -41,13 +41,13 @@
                       </th>
                       <% for i in 0..5 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
-                          <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
-                            </td>
-                            <% end %>
-                              <% end %>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
+                        <% else %>
+                          <td style="background-color: #CEF6CE;">
+                            <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
+                          </td>
+                        <% end %>
+                      <% end %>
                     </tr>
                     <tr>
                       <th scope="row">
@@ -55,10 +55,10 @@
                       </th>
                       <% for i in 18..23 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -69,10 +69,10 @@
                       </th>
                       <% for i in 36..41 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -83,10 +83,10 @@
                       </th>
                       <% for i in 54..59 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -97,10 +97,10 @@
                       </th>
                       <% for i in 72..77 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -111,10 +111,10 @@
                       </th>
                       <% for i in 90..95 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -125,17 +125,17 @@
                       </th>
                       <% for i in 108..113 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
                     </tr>
                   </tbody>
                 </table>
-              
+
             </div>
           </div>
           <div class="tab-pane" id="reserve_tabB">
@@ -159,10 +159,10 @@
                       </th>
                       <% for i in 6..11 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -173,10 +173,10 @@
                       </th>
                       <% for i in 24..29 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -187,10 +187,10 @@
                       </th>
                       <% for i in 42..47 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -201,10 +201,10 @@
                       </th>
                       <% for i in 60..65 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -215,10 +215,10 @@
                       </th>
                       <% for i in 78..83 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -229,10 +229,10 @@
                       </th>
                       <% for i in 96..101 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -243,10 +243,10 @@
                       </th>
                       <% for i in 114..119 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -254,7 +254,7 @@
                   </tbody>
                 </table>
               </div>
-            
+
           </div>
           <div class="tab-pane" id="reserve_tabC">
               <div class="table">
@@ -277,10 +277,10 @@
                       </th>
                       <% for i in 12..17 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -291,10 +291,10 @@
                       </th>
                       <% for i in 30..35 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -305,10 +305,10 @@
                       </th>
                       <% for i in 48..53 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -319,10 +319,10 @@
                       </th>
                       <% for i in 66..71 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -333,10 +333,10 @@
                       </th>
                       <% for i in 84..89 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -347,10 +347,10 @@
                       </th>
                       <% for i in 102..107 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
@@ -361,22 +361,22 @@
                       </th>
                       <% for i in 120..125 %>
                         <% if @open_hospitals_array[i].count == 0 %>
-                          <td>0件</td>
+                          <td style="background-color: #e2e2e2;"><span class="count_number_zero">0件</span></td>
                           <% else %>
-                            <td>
-                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]) %>
+                            <td style="background-color: #CEF6CE;">
+                              <%= link_to "#{@open_hospitals_array[i].count}件", hospitals_list_path(hospital_ids: @open_hospitals_array[i].pluck(:id), department_id: @department.id, reservation_time: @reserved_time_candidates[i]), class: 'count_number_some' %>
                             </td>
                             <% end %>
                               <% end %>
                     </tr>
                   </tbody>
                 </table>
-            
+
             </div>
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-default">戻る</button>
+      <%= link_to '戻る', :back, class: 'btn btn-default' %>
     </div>
   </div>
 </div>
