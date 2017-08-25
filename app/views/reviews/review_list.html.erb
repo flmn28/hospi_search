@@ -25,6 +25,13 @@
                   <td>メールアドレス：</td>
                   <td><%= @hospital.email %></td>
                 </tr>
+                <td>診療科：</td>
+                <td>
+                  <% @hospital.departments.each do |department| %>
+                    <%= department.name %>
+                  <% end %>
+                </td>
+              </tr>
               </table>
             </td>
           </tr>

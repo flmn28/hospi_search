@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get '/reservations_list' => 'reservations#reservations_list'
   get '/confirm' => 'reservations#confirm'
   get '/mypage' => 'patients#show'
-  get '/reservation/:id' => 'reservations#show'
+  delete '/reservations/destroy' => 'reservations#destroy', as: 'cancel_reservation'
 
   get '/reviews/new' => 'reviews#new', as: 'new_review'
   get '/reviews/list' => 'reviews#review_list', as: 'hospital_reviews'

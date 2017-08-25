@@ -113,4 +113,10 @@ class ReservationsController < ApplicationController
   def show
   end
 
+  def destroy
+    @reservation = Reservation.find_by(id: params[:reservation_id])
+    @reservation.destroy
+    redirect_to mypage_path(current_patient.id)
+  end
+
 end
