@@ -101,6 +101,7 @@ class ReservationsController < ApplicationController
       @reservation = Reservation.find_by(id: reservation_id)
       @reservations << @reservation
     end
+    @reservation_time = @reservations[0].reserved_time
   end
 
   def confirm
